@@ -3,6 +3,7 @@ import { state } from "./state.js";
 const API_KEY = "c55d2d62";
 const API_URL = "https://www.omdbapi.com/";
 
+// call movies
 export async function fetchMovies() {
   try {
     state.loading = true;
@@ -30,12 +31,13 @@ export async function fetchMovies() {
     state.movies = data.Search;
     state.totalPages = Math.ceil(data.totalResults / 10);
   } catch {
-    state.error = "Something went wrong. Please try again.";
+    state.error = "Something went wrong! Please try again.";
   } finally {
     state.loading = false;
   }
 }
 
+// call movie details
 export async function fetchMovieDetails(id) {
   const res = await fetch(
     `${API_URL}?apikey=${API_KEY}&i=${id}&plot=full`

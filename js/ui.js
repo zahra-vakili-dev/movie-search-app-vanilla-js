@@ -4,6 +4,7 @@ import { openModal } from "./modal.js";
 const grid = document.querySelector("#moviesGrid");
 const message = document.querySelector("#message");
 
+// rendering
 export function renderUI() {
   if (state.loading) {
     grid.innerHTML = skeletons();
@@ -33,6 +34,7 @@ export function renderUI() {
   });
 }
 
+// show movie cards
 function movieCard(movie) {
   const poster =
     movie.Poster !== "N/A"
@@ -51,6 +53,7 @@ function movieCard(movie) {
   `;
 }
 
+// skelet of loadind
 function skeletons() {
   return Array(10).fill(0).map(() => `
     <div class="bg-gray-700 h-80 rounded animate-pulse"></div>

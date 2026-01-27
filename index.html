@@ -15,30 +15,20 @@
 
   <!-- Search & Filters -->
   <section class="max-w-3xl mx-auto px-4 space-y-4">
-    <input
-      id="search"
-      type="text"
-      placeholder="Search for a movie or series..."
-      class="w-full p-3 rounded bg-gray-800 text-white outline-none focus:ring-2 focus:ring-blue-500"
-    />
+    <input id="search" type="text" placeholder="Search for a movie or series..."
+      class="w-full p-3 rounded bg-gray-800 text-white outline-none focus:ring-2 focus:ring-blue-500"/>
 
     <div class="flex flex-col sm:flex-row gap-4">
-      <select
-        id="type"
-        class="flex-1 p-3 rounded bg-gray-800 text-white outline-none"
-      >
+      <select id="type" class="flex-1 p-3 rounded bg-gray-800 text-white outline-none">
         <option value="all">All Types</option>
         <option value="movie">Movie</option>
         <option value="series">Series</option>
         <option value="episode">Episode</option>
       </select>
 
-      <input
-        id="year"
-        type="number"
-        placeholder="Year (e.g. 2020)"
-        class="flex-1 p-3 rounded bg-gray-800 text-white outline-none"
-      />
+      <input id="year" type="number" placeholder="Year (e.g. 2020)"
+       class="flex-1 p-3 rounded bg-gray-800 text-white outline-none"/>
+
     </div>
   </section>
 
@@ -46,36 +36,22 @@
 
   <!-- Movies Grid -->
   <main class="max-w-6xl mx-auto px-4 mt-8">
-    <div
-      id="moviesGrid"
-      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
-    ></div>
+    <div id="moviesGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"></div>
   </main>
 
   <!-- Pagination -->
-  <section
-    id="pagination"
-    class="hidden flex items-center justify-center gap-4 mt-10 pb-10"
-  >
-    <button id="prev" class="px-4 py-2 bg-gray-700 rounded disabled:opacity-40">
-      Prev
-    </button>
+  <section id="pagination" class="hidden flex items-center justify-center gap-4 mt-10 pb-10">
+    <button id="prev" class="px-4 py-2 bg-gray-700 rounded disabled:opacity-40">Prev</button>
+
     <span id="page" class="text-sm text-gray-300"></span>
-    <button id="next" class="px-4 py-2 bg-gray-700 rounded disabled:opacity-40">
-      Next
-    </button>
+
+    <button id="next" class="px-4 py-2 bg-gray-700 rounded disabled:opacity-40">Next</button>
   </section>
 
   <!-- Modal -->
-  <div
-    id="modal"
-    class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50"
-  >
+  <div id="modal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
     <div class="bg-gray-800 max-w-md w-full mx-4 rounded-lg p-6 relative">
-      <button
-        id="closeModal"
-        class="absolute top-3 right-3 text-gray-400 hover:text-white text-xl"
-      >
+      <button id="closeModal" class="absolute top-3 right-3 text-gray-400 hover:text-white text-xl">
         &times;
       </button>
       <div id="modalContent" class="text-center"></div>
